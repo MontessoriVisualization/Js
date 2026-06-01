@@ -46,9 +46,59 @@ function add(a, b) {
   console.log("The sum is: ", a + b);
 }
 
-num1 = 10;
-num2 = 20;
-operatpr = "+";
-if (operatpr == "+") {
-  add(num1, num2);
+let distance = 12; // in km
+let time = 25; // in minutes
+let isPeakHour = true;
+let isPremiumUser = false;
+let hasCoupon = true;
+let baseFare = 50;
+let totalFare = 0;
+
+function calculateFare(distance, time, isPeakHour, isPremiumUser, hasCoupon) {
+  if (distance <= 0 && time <= 0) {
+    console.log("Distance and time must be greater than 0");
+    return;
+  }
+  distanceFare(distance);
+  timeFare(time);
+  if (isPeakHour) {
+    totalFare = totalFare + totalFare * 0.2; // 20% increase during peak hours
+  }
+  if (isPremiumUser) {
+    totalFare = totalFare - totalFare * 0.1; // 10% discount for premium users
+  }
+}
+
+function distanceFare(distance) {
+  if (distance <= 2) {
+    totalFare = baseFare;
+  } else {
+    totalFare = baseFare + (distance - 2) * 10;
+  }
+}
+function timeFare(time) {
+  if (time > 20) {
+    totalFare += (time - 20) * 2;
+  }
+}
+
+calculateFare(distance, time, isPeakHour, isPremiumUser, hasCoupon);
+console.log("Total Fare: ", totalFare);
+
+let distance = 12;
+let time = 25;
+let isPeakHour = true;
+let isPremiumUser = false;
+let hasCoupon = true;
+let BaseFare = 50;
+function totalFare(distance, BaseFare) {
+  return BaseFare + distance * 10;
+}
+
+if (distance === 0 || time === 0) {
+  console.log("Invalid input: distance and time must be greater than zero");
+} else if (distance <= 2) {
+  console.log("your total fare is 50");
+} else if (distance > 2) {
+  console.log("your total fare is " + " " + totalFare(distance, BaseFare));
 }

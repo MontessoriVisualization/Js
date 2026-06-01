@@ -79,4 +79,4 @@ function avg(sum, count) {
   return sum / count;
 }
 
-console.log(add(a, b));
+console.log(add(1, 2));
