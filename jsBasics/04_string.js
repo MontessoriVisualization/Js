@@ -66,12 +66,18 @@ console.log(splitStr.split(", ")); // splits the string into an array of substri
 // immutableStr[0] = "H";
 // console.log(immutableStr); // Output: "hello" (unchanged)
 
+
 // const a = "John said "i like pizza" "; // This will cause an error because of the double quotes inside the string
 const a = 'John said "i like pizza" '; // This is correct because we are using single quotes to define the string
 const b = "John said 'i like pizza' "; // This is also correct because we are using double quotes to define the string
 const c = `John said "i like pizza" `; // This is also correct because we are using backticks to define the string
-const scapedStr = 'John said "i like pizza" '; // This is also correct because we are using escape characters to include double quotes inside the string
+const scapedStr = "John said \"i like pizza\" "; // This is also correct because we are using escape characters to include double quotes inside the string
 console.log(a);
 console.log(b);
 console.log(c);
 console.log(scapedStr);
+
+
+
+
+
